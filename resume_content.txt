@@ -1,0 +1,407 @@
+d 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+EMBEDDED SOFTWARE DEVELOPER 
+PRAVEEN M  
+ADDRESS: No: 13B/188, Srinivasa Perumal Kovil Street, Kamarajar Salai, Madurai - 625009 
+Email-id: praveenkarthi538@gmail.com      Mobile-no: 8778867265 
+ 
+ 
+CERTIFICATON 
+COURSES 
+ 
+ Embedded System for 
+Arduino 
+ PCB Design 
+ Achieved “HACKTHON” 
+from Wikitechy and Microsoft 
+Research Community Group, 
+Chennai in 2019. 
+ Participated Internship in 
+INTERNET OF THINGS at 
+SACS MAVMM 
+ENGINEERING 
+COLLEGE. 
+ 
+SKILLS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Decision Making 
+Problem Solving 
+Leadership 
+Self-Motivation 
+SUMMARY 
+ Result-oriented Embedded Developer highly skilled in 
+designing and building Embedded codes to increase 
+efficient of applications. Adept at identifying client 
+requirements and ensuring specifications are met by 
+routine checks for maximum client satisfaction. 
+Proficient at debugging minor fixes. 
+ To continue a challenging and rewarding career that 
+offers the opportunity to utilize knowledge as Embedded 
+software Developer. 
+ 
+ 
+EDUCATION QUALIFICATION 
+ 
+ B.E Electronics and Communication Engineering, 
+Completed, March 2022. SACS MAVMM Engineering 
+College, Madurai. Marks 80%. 
+ 
+ 12th, Completed, March 2018. MAVMM Hr.Sec.School, 
+Madurai. State Board – Marks 65.5%. 
+ 
+ 10th, Completed, March 2016. St Mary’s Hr.Sec.School, 
+Madurai. State Board – Marks 77.7%. 
+ 
+ 
+WORKING EXPERIENCE 
+  
+ Virtual Technology,Madurai. 
+ Embedded Developer, 
+ 05-06 -2022 - 30-11-2022 
+ 
+The Petal Automations, Madurai. 
+Embedded Developer, 
+05-07-2022 – Present. 
+ 
+ 
+ 
+ 
+ 
+ 
+Multitasking 
+ 
+ 
+  
+ 
+LANGUAGES 
+ 
+ English 
+ Tamil 
+Full Professional Proficiency 
+ 
+ 
+ENGINEERING / 
+TECHNOLOGY 
+ 
+Languages: 
+ C 
+ C++ 
+ Python 
+ Embedded C 
+ 
+Database: 
+ MYSQL 
+  
+IDE: 
+ MPLAB IDE 
+ Arduino IDE 
+ KeiluVision,  
+ Embedded Segger 
+IDE 
+ Visual Studio Code 
+Software: 
+ Proteous 
+ Advanced Design 
+System(ADS) 
+ Cadence OrCAD / 
+Alegro 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.Pig Repellent device 
+ 
+Team: 2 
+Responsibility: Writing code in PIC and PCB Assembly. 
+Technology used: PIC Micro Controller, 555 Timer. 
+ 
+Project Overview: Designed and implemented an automated 
+pig repellent system  using a PIC microcontroller and high-
+frequency speakers  for crop protection in agricultural fields. 
+The device generates periodic sound every 5 minutes  during 
+night hours (6 PM – 6 AM)  to deter wild animals without 
+human intervention. 
+2. Nurse Call Station (NCS) 
+ 
+Team: 2 
+Responsibility: Writing Code on nRF52 for iBeacon. 
+Technology used: Bluetooth Low Energy (BLE), nRF52833. 
+ 
+Project Overview: Developed a long-range wireless nurse 
+calling system  using Zigbee communication  capable of 
+covering up to 1500 meters indoors  across hospital floors. 
+Designed a low-latency emergency alert network  with 
+multiple call units and a central nursing station dashboard for 
+real-time monitoring and response. Implemented double-press 
+beacon trigger logic  to avoid false alarms and ensure reliable 
+nurse notification 
+ 
+3. Asset Tracking (Beacon) 
+ 
+Team: 2  
+Responsibility: Writing Code on nRF52. 
+Technology used: Bluetooth Low Energy (BLE), nRF52833, 
+MPU6050. 
+ 
+Project Overview: Developed a BLE-based asset tracking 
+system using an nRF52 SoC integrated with MPU6050 motion 
+sensors for real-time movement detection and monitoring. 
+Managed end-to-end system design , including hardware 
+selection, firmware development , and custom BLE 
+communication protocols  for reliable data transmission. 
+Implemented sensor fusion algorithms  to accurately capture 
+and interpret motion data, i mproving tracking accuracy and 
+asset visibility. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  4. STEM Project 
+ 
+Team: 3 
+Responsibility: Firmware in STC15 Series and Testing. 
+Technology used: One wire Communication Protocol. 
+ 
+Project Overview : Engineered a steam control and 
+monitoring system using the STC15F series microcontroller 
+with the 1-Wire communication protocol  for reliable data 
+exchange within steam components. Designed and developed 
+both hardware and firmware , enabling precise control, 
+parameter monitoring, and responsive system operation . 
+Implemented 1-Wire protocol stack  for efficient single -bus 
+communication, ensuring accurate sensor interfacing and 
+control logic. 
+ 
+5. IOT LAB KIT V 2 & 2.1  
+ 
+Team: 3  
+Role: Embedded Software Developer.  
+Responsibility: Writing code in Raspberry Pi.  
+Technology used: IOT, UART, SPI, RS232 to USB, USB to 
+TTL, RFID, I2S, Bluetooth, MQTT and I2C communication 
+Protocols.  
+ 
+Project Overview:  It is forstudent learning purpose. Learn 
+about how to interface I/O and sensors modules with IOT. 
+ 
+6. Electronic Shelf Label  
+ 
+Team: 1 
+Role: Embedded Software Developer.  
+Responsibility: Writing code in nRF52810.  
+Technology used:  Bluetooth Low Energy (BLE),nRF52810, 
+E-Paper Display. 
+ 
+Project Overview:  Developed a low -power Electronic Shelf 
+Label (ESL) using nRF52810 BLE SoC  running Zephyr 
+RTOS to wirelessly update product pricing on an SSD1680-
+based e -paper display . Implemented a custom BLE GATT 
+service for real -time data transfer from a gateway and built a 
+Zephyr SPI display driver  for e -paper control. Optimized 
+firmware for RAM-constrained nRF52810 , achieving stable 
+BLE + display operation with deep -sleep power management. 
+Enabled multi -device scalability and reliable wireless price 
+updates suitable for retail automation. 
+ 
+ 
+ 
+Controllers: 
+ Nodemcu 
+ ESP32 
+ Arduino UNO and 
+MEGA 
+ Arduino UNO Q 
+ Raspberry pi 
+ PIC16F716 
+ nRF52 Series 
+ nRF91 
+ STC15 
+ 
+RF Technology: 
+ Bluetooth Low 
+Energy 
+ Wi-Fi 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PERSONAL 
+INFORMATION 
+ 
+ 
+Father Name       :     Murugan.K 
+DOB                     :     26/12/1999 
+Gender                 :     Male 
+Marital Status     :     Single 
+Nationality           :     Indian 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DECLARATION 
+ 
+I do hereby declare that the 
+above information is true to the best 
+of my knowledge. 
+ 
+ 
+ 
+ 
+ 
+SIGNATURE 
+M.PRAVEEN 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7. IoT BLE Gateway 
+ 
+Team: 1 
+Role: Embedded Software Developer.  
+Responsibility: Writing code in Raspberry Pi, nRF52832.  
+Technology used: IOT, Ethernet, Wi-Fi, UART, Bluetooth Low 
+Energy, MQTT and HTTP Protocols. 
+ 
+Project Overview : Designed and developed a multi-protocol 
+IoT BLE Gateway  using Raspberry Pi Zero  as the main 
+controller to bridge BLE devices to cloud platforms  via MQTT 
+and HTTP. Implemented UART communication with nRF52 -
+based modules  for controlled BLE scanning, beacon data 
+acquisition, and ESL device management. The gateway supports 
+asset tracking, beacon monitoring, and Electronic Shelf Label 
+(ESL) control , similar to commercial gateways enabling 
+centralized device management and real -time data upload to the 
+cloud. 
+ 
+8. Web Based App Lab for Arduino UNO Q 
+ 
+Team: 4 
+Role: Embedded Software Developer (R&D).  
+Responsibility: Writing code in Python, UNO Q.  
+Technology used Wi-Fi, ADB Shell, SSH, AI. 
+ 
+Project Overview : Developed a web-based Arduino 
+development environment  with a local edge agent  to enable 
+secure SSH access, ADB shell connectivity, and USB device 
+control from the browser. The local agent runs on the host 
+machine, communicates with the cl oud over the local IP bridge , 
+and exposes hardware interfaces (Arduino UNO Q and other USB 
+devices) to the web IDE. Implemented browser -to-device 
+workflow for code editing, compilation, deployment, and serial 
+monitoring, eliminating the need for a native desktop IDE. 
+ 
+ACADEMIC PROJECTS: 
+ 
+ We will create a micro strip patch antenna with specific 
+characteristics, such as operating frequency, bandwidth, 
+and gain. Once the antenna is built, we will conduct 
+rigorous testing in an anechoic chamber to validate its 
+real-world performance against simulated results. This 
+will involve measuring radiation patterns, return loss, and 
+other key parameters. 
+ This system utilizes Infrared (IR) technology to detect the 
+presence of vehicles and control their engines 
+automatically. In addition to the primary system 
+functionality, we are incorporating a unique feature - the 
+ability to generate driver resumes based on their waiting 
+time at traffic signals. 
+ 
