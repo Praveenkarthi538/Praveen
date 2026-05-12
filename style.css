@@ -242,6 +242,11 @@ nav .container {
     box-shadow: 0 15px 35px var(--shadow);
 }
 
+.hero-name {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .profile-description p {
     font-size: 1.25rem;
     color: var(--text-primary);

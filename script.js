@@ -26,10 +26,10 @@ function initCanvas() {
 
 function animateCanvas() {
     ctx.clearRect(0, 0, width, height);
-    
+
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     const color = isLight ? '#00a86b' : '#00ff95';
-    
+
     particles.forEach(p => {
         p.x += p.speedX;
         p.y += p.speedY;
@@ -82,11 +82,11 @@ updateThemeIcon(savedTheme);
 themeToggle.addEventListener('click', () => {
     const currentTheme = htmlElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
+
     htmlElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
-    
+
     // Optional: Force canvas color update if needed (already handled in animate loop but this is cleaner)
 });
 
@@ -107,7 +107,7 @@ const navLinks = document.querySelector('.nav-links');
 if (menuBtn) {
     menuBtn.addEventListener('click', () => {
         navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        if(navLinks.style.display === 'flex') {
+        if (navLinks.style.display === 'flex') {
             navLinks.style.position = 'absolute';
             navLinks.style.top = '70px';
             navLinks.style.left = '0';
@@ -123,13 +123,24 @@ if (menuBtn) {
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.hero-name', { y: 20, opacity: 0, duration: 1, ease: 'power3.out' });
+// 1. Hero Animations (Execute once on load)
+const heroName = document.querySelector('.hero-name');
+if (heroName) {
+    gsap.from(heroName, { 
+        y: 20, 
+        opacity: 0, 
+        duration: 1, 
+        ease: 'power3.out',
+        onComplete: () => { heroName.style.opacity = "1"; }
+    });
+}
 gsap.from('.hero-content h1', { y: 30, opacity: 0, duration: 1.2, delay: 0.2, ease: 'power3.out' });
 gsap.from('.hero-content p', { y: 20, opacity: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
 gsap.from('.hero-btns', { y: 20, opacity: 0, duration: 1, delay: 0.6, ease: 'power3.out' });
 gsap.from('.profile-img-container', { x: 50, opacity: 0, duration: 1.5, delay: 0.3, ease: 'power3.out' });
 
-gsap.utils.toArray('section h2').forEach(header => {
+// 2. Section Headers (Excluding hero name to avoid conflict)
+gsap.utils.toArray('section h2:not(.hero-name)').forEach(header => {
     gsap.from(header, {
         scrollTrigger: { trigger: header, start: 'top 85%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
@@ -219,7 +230,7 @@ function populateCountryCodes() {
     const select = document.getElementById('wa-country-code');
     const phoneInput = document.getElementById('wa-phone');
     if (!select || !phoneInput) return;
-    
+
     countries.sort((a, b) => a.name.localeCompare(b.name)).forEach(c => {
         const option = document.createElement('option');
         option.value = c.code;
@@ -250,7 +261,7 @@ function validatePhone() {
     const phoneInput = document.getElementById('wa-phone');
     const selectedOption = select.options[select.selectedIndex];
     const len = parseInt(selectedOption.dataset.len);
-    
+
     let val = phoneInput.value.replace(/[^0-9]/g, '');
     if (val.length > len) {
         val = val.slice(0, len);
@@ -265,20 +276,20 @@ const whatsappForm = document.getElementById('whatsapp-form');
 if (whatsappForm) {
     whatsappForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const name = document.getElementById('wa-name').value;
         const email = document.getElementById('wa-email').value;
         const countryCode = document.getElementById('wa-country-code').value;
         const phone = document.getElementById('wa-phone').value;
         const subject = document.getElementById('wa-subject').value;
         const description = document.getElementById('wa-description').value;
-        
+
         // Full phone number with country code
         const fullPhoneNumber = countryCode + phone;
         const phoneNumber = "918778867265"; // Your WhatsApp Number
-        
+
         const message = `Hello, I am ${name}.%0A%0A*Details:*%0A- Email: ${email}%0A- Phone: +${countryCode} ${phone}%0A- Subject: ${subject}%0A%0A*Message:*%0A${description}`;
-        
+
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
         window.open(whatsappUrl, '_blank');
     });
@@ -292,7 +303,7 @@ if (phoneInputEl) {
 // Page Loader Logic (Uses lottieAnimationData from animationData.js)
 document.addEventListener('DOMContentLoaded', () => {
     const loaderContainer = document.getElementById('lottie-loader');
-    
+
     if (loaderContainer) {
         if (typeof lottieAnimationData !== 'undefined') {
             console.log("Animation data found, starting Lottie...");
@@ -319,8 +330,10 @@ function hideLoader() {
     }
 }
 
-// Hide loader when page is fully loaded
-window.addEventListener('load', hideLoader);
+// Hide loader with a 2-second delay so the animation is visible
+window.addEventListener('load', () => {
+    setTimeout(hideLoader, 2000);
+});
 
-// Safety fallback: Hide loader after 4 seconds anyway (helps with slow GitHub Pages loading)
-setTimeout(hideLoader, 4000);
+// Safety fallback: Hide loader after 5 seconds anyway (helps with slow GitHub Pages loading)
+setTimeout(hideLoader, 5000);
