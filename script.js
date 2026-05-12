@@ -123,7 +123,7 @@ if (menuBtn) {
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.hero-content h3', { y: 20, opacity: 0, duration: 1, ease: 'power3.out' });
+gsap.from('.hero-name', { y: 20, opacity: 0, duration: 1, ease: 'power3.out' });
 gsap.from('.hero-content h1', { y: 30, opacity: 0, duration: 1.2, delay: 0.2, ease: 'power3.out' });
 gsap.from('.hero-content p', { y: 20, opacity: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
 gsap.from('.hero-btns', { y: 20, opacity: 0, duration: 1, delay: 0.6, ease: 'power3.out' });
@@ -301,9 +301,16 @@ if (loaderContainer && typeof lottieAnimationData !== 'undefined') {
     });
 }
 
-window.addEventListener('load', () => {
+function hideLoader() {
     const loader = document.getElementById('loader');
-    setTimeout(() => {
+    if (loader && !loader.classList.contains('fade-out')) {
         loader.classList.add('fade-out');
-    }, 2500); // Increased to 2.5s to let the full 2s Lottie animation play
-});
+        console.log("Loader hidden");
+    }
+}
+
+// Hide loader when page is fully loaded
+window.addEventListener('load', hideLoader);
+
+// Safety fallback: Hide loader after 3 seconds anyway (helps with slow GitHub Pages loading)
+setTimeout(hideLoader, 3000);
