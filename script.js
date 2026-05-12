@@ -290,16 +290,26 @@ if (phoneInputEl) {
     phoneInputEl.addEventListener('input', validatePhone);
 }
 // Page Loader Logic (Uses lottieAnimationData from animationData.js)
-const loaderContainer = document.getElementById('lottie-loader');
-if (loaderContainer && typeof lottieAnimationData !== 'undefined') {
-    lottie.loadAnimation({
-        container: loaderContainer,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: lottieAnimationData
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const loaderContainer = document.getElementById('lottie-loader');
+    
+    if (loaderContainer) {
+        if (typeof lottieAnimationData !== 'undefined') {
+            console.log("Animation data found, starting Lottie...");
+            lottie.loadAnimation({
+                container: loaderContainer,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                animationData: lottieAnimationData
+            });
+        } else {
+            console.error("Lottie Animation Data NOT found! Check animationData.js");
+            // Fallback: show a simple "P" if animation fails
+            loaderContainer.innerHTML = '<span style="font-size: 5rem; color: var(--primary); font-family: Outfit;">P</span>';
+        }
+    }
+});
 
 function hideLoader() {
     const loader = document.getElementById('loader');
@@ -312,5 +322,5 @@ function hideLoader() {
 // Hide loader when page is fully loaded
 window.addEventListener('load', hideLoader);
 
-// Safety fallback: Hide loader after 3 seconds anyway (helps with slow GitHub Pages loading)
-setTimeout(hideLoader, 3000);
+// Safety fallback: Hide loader after 4 seconds anyway (helps with slow GitHub Pages loading)
+setTimeout(hideLoader, 4000);
