@@ -238,37 +238,74 @@
     <br>
     <section id="contact" class="container">
         <div class="glass-card contact-container">
-            <h2>Let's Connect</h2>
-            <p style="margin-bottom: 2.5rem; color: var(--text-secondary);">Ready to collaborate? Fill the details below
-                to reach me via WhatsApp.</p>
+            <div class="contact-header">
+                <h2>Let's Connect</h2>
+                <p style="margin-bottom: 2.5rem; color: var(--text-secondary);">Ready to collaborate? Reach out via the
+                    form or contact details below.</p>
+            </div>
 
-            <form id="whatsapp-form" class="whatsapp-form">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <input type="text" id="wa-name" placeholder="Full Name" required>
+            <div class="contact-main-grid">
+                <div class="contact-info-side">
+                    <div class="contact-method-card">
+                        <div class="contact-icon-box">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text-box">
+                            <h4>Phone</h4>
+                            <p>+91-87788 67265</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="wa-email" placeholder="Email ID" required>
+                    <div class="contact-method-card">
+                        <div class="contact-icon-box">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text-box">
+                            <h4>Email</h4>
+                            <p>praveenkarthi538@gmail.com</p>
+                        </div>
                     </div>
-                    <div class="form-group phone-input-group">
-                        <select id="wa-country-code" class="country-select">
-                            <!-- Populated via JS -->
-                        </select>
-                        <input type="tel" id="wa-phone" placeholder="Phone Number" required pattern="[0-9]{10}"
-                            title="Please enter a 10-digit phone number">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="wa-subject" placeholder="Subject" required>
+                    <div class="contact-method-card">
+                        <div class="contact-icon-box">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="contact-text-box">
+                            <h4>Address</h4>
+                            <p>No: 13B/188, Srinivasa Perumal Kovil Street,<br>Kamarajar Salai, Madurai - 625009</p>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group" style="margin-top: 1rem;">
-                    <textarea id="wa-description" rows="4" placeholder="How can I help you?" required></textarea>
+
+                <div class="contact-form-side">
+                    <form id="whatsapp-form" class="whatsapp-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" id="wa-name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="wa-email" placeholder="Email ID" required>
+                            </div>
+                            <div class="form-group phone-input-group">
+                                <select id="wa-country-code" class="country-select">
+                                    <!-- Populated via JS -->
+                                </select>
+                                <input type="tel" id="wa-phone" placeholder="Phone Number" required pattern="[0-9]{10}"
+                                    title="Please enter a 10-digit phone number">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="wa-subject" placeholder="Subject" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 1rem;">
+                            <textarea id="wa-description" rows="4" placeholder="How can I help you?"
+                                required></textarea>
+                        </div>
+                        <div class="contact-btns" style="margin-top: 2rem;">
+                            <button type="submit" class="btn btn-primary">Send via WhatsApp <i
+                                    class="fab fa-whatsapp"></i></button>
+                        </div>
+                    </form>
                 </div>
-                <div class="contact-btns" style="margin-top: 2rem;">
-                    <button type="submit" class="btn btn-primary">Send via WhatsApp <i
-                            class="fab fa-whatsapp"></i></button>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
