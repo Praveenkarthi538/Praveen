@@ -72,7 +72,6 @@ animateCanvas();
 // Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.documentElement;
-const themeIcon = themeToggle.querySelector('i');
 
 // Check for saved theme
 const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -86,11 +85,10 @@ themeToggle.addEventListener('click', () => {
     htmlElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
-
-    // Optional: Force canvas color update if needed (already handled in animate loop but this is cleaner)
 });
 
 function updateThemeIcon(theme) {
+    const themeIcon = themeToggle.querySelector('i');
     if (theme === 'light') {
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
@@ -100,25 +98,68 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Mobile Menu
-const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'var(--bg-color)';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.padding = '2rem';
-            navLinks.style.borderBottom = '1px solid var(--border-color)';
-        }
-    });
+// Clock Logic
+function updateClock() {
+    const now = new Date();
+    
+    // Time
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+    
+    const timeString = `${displayHours}:${displayMinutes} ${ampm}`;
+    
+    // Date
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options);
+    
+    const timeEl = document.getElementById('dock-time');
+    const dateEl = document.getElementById('dock-date');
+    
+    if (timeEl) timeEl.textContent = timeString;
+    if (dateEl) dateEl.textContent = dateString;
 }
+
+setInterval(updateClock, 1000);
+updateClock();
+
+
+// Active State for Dock
+const dockItems = document.querySelectorAll('.dock-item[href^="#"]');
+const navSections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+    let current = "";
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Check if we're at the bottom of the page
+    if ((window.innerHeight + scrollPos) >= document.documentElement.scrollHeight - 100) {
+        current = "contact";
+    } else {
+        navSections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionId = section.getAttribute('id');
+            // Only update current if the section has a corresponding nav item
+            if (scrollPos >= sectionTop - 200) {
+                if (document.querySelector(`.dock-item[href="#${sectionId}"]`)) {
+                    current = sectionId;
+                }
+            }
+        });
+    }
+
+    if (current) {
+        dockItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
+    }
+});
+
 
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
@@ -171,6 +212,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: target.offsetTop - 70,
                 behavior: 'smooth'
             });
+            
+            // Manually set active class on click for better responsiveness
+            dockItems.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+            
             if (window.innerWidth <= 768) navLinks.style.display = 'none';
         }
     });

@@ -20,24 +20,36 @@
     </div>
     <canvas id="bg-canvas"></canvas>
 
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Embedded Engineer</a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Stack</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-                    <i class="fas fa-moon"></i>
+    <nav class="floating-dock">
+        <div class="dock-container">
+            <div class="dock-section clock-section">
+                <div id="dock-time" class="dock-time">00:00 PM</div>
+                <div id="dock-date" class="dock-date">Mon, Jan 01, 2026</div>
+            </div>
+            
+            <div class="dock-divider"></div>
+            
+            <div class="dock-section nav-section">
+                <a href="#home" class="dock-item active" title="Home">
+                    <div class="dock-icon-bg"><i class="fas fa-home"></i></div>
+                </a>
+                <a href="#about" class="dock-item" title="About">
+                    <div class="dock-icon-bg"><i class="fas fa-user"></i></div>
+                </a>
+                <a href="#projects" class="dock-item" title="Projects">
+                    <div class="dock-icon-bg"><i class="fas fa-briefcase"></i></div>
+                </a>
+                <a href="#contact" class="dock-item" title="Contact">
+                    <div class="dock-icon-bg"><i class="fab fa-whatsapp"></i></div>
+                </a>
+            </div>
+            
+            <div class="dock-divider"></div>
+            
+            <div class="dock-section theme-section">
+                <button id="theme-toggle" class="dock-item theme-btn" title="Toggle Theme">
+                    <div class="dock-icon-bg theme-icon-bg"><i class="fas fa-moon"></i></div>
                 </button>
-                <div class="menu-btn" id="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </nav>
@@ -172,6 +184,18 @@
                 </div>
             </div>
         </div>
+    <section id="resume" class="container">
+        <div class="glass-card resume-banner">
+            <div class="resume-content">
+                <h2>Curious about my full background?</h2>
+                <p>Grab a copy of my resume to explore my complete work history, key achievements, and technical skills.</p>
+            </div>
+            <div class="resume-action">
+                <a href="praveen_resume_updated_2026.pdf" download class="btn-resume">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
     </section>
     <br>
     <section id="projects" class="container">
@@ -270,7 +294,7 @@
                         </div>
                         <div class="contact-text-box">
                             <h4>Address</h4>
-                            <p>No: 13B/188, Srinivasa Perumal Kovil Street,<br>Kamarajar Salai, Madurai - 625009</p>
+                            <p>Madurai, Tamil Nadu, India</p>
                         </div>
                     </div>
                 </div>
