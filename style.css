@@ -285,6 +285,7 @@ section {
 @media (max-width: 768px) {
     .floating-dock {
         bottom: 20px;
+        top: auto;
         width: 90%;
     }
     
