@@ -101,23 +101,23 @@ function updateThemeIcon(theme) {
 // Clock Logic
 function updateClock() {
     const now = new Date();
-    
+
     // Time
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const displayHours = hours % 12 || 12;
     const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-    
+
     const timeString = `${displayHours}:${displayMinutes} ${ampm}`;
-    
+
     // Date
     const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
     const dateString = now.toLocaleDateString('en-US', options);
-    
+
     const timeEl = document.getElementById('dock-time');
     const dateEl = document.getElementById('dock-date');
-    
+
     if (timeEl) timeEl.textContent = timeString;
     if (dateEl) dateEl.textContent = dateString;
 }
@@ -133,7 +133,7 @@ const navSections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
     let current = "";
     const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     // Check if we're at the bottom of the page
     if ((window.innerHeight + scrollPos) >= document.documentElement.scrollHeight - 100) {
         current = "contact";
@@ -167,10 +167,10 @@ gsap.registerPlugin(ScrollTrigger);
 // 1. Hero Animations (Execute once on load)
 const heroName = document.querySelector('.hero-name');
 if (heroName) {
-    gsap.from(heroName, { 
-        y: 20, 
-        opacity: 0, 
-        duration: 1, 
+    gsap.from(heroName, {
+        y: 20,
+        opacity: 0,
+        duration: 1,
         ease: 'power3.out',
         onComplete: () => { heroName.style.opacity = "1"; }
     });
@@ -212,11 +212,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: target.offsetTop - 70,
                 behavior: 'smooth'
             });
-            
+
             // Manually set active class on click for better responsiveness
             dockItems.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
-            
+
             if (window.innerWidth <= 768) navLinks.style.display = 'none';
         }
     });
@@ -384,40 +384,3 @@ window.addEventListener('load', () => {
 // Safety fallback: Hide loader after 5 seconds anyway (helps with slow GitHub Pages loading)
 setTimeout(hideLoader, 5000);
 
-// Project Modal Logic
-const modal = document.getElementById('project-modal');
-const projectCards = document.querySelectorAll('.project-card');
-const modalClose = document.querySelector('.modal-close');
-
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        const title = card.querySelector('h3').textContent;
-        const img = card.querySelector('img').src;
-        const tags = card.querySelector('span').textContent;
-        const fullDesc = card.getAttribute('data-details');
-
-        document.getElementById('modal-title').textContent = title;
-        document.getElementById('modal-img').src = img;
-        document.getElementById('modal-tags').textContent = tags;
-        document.getElementById('modal-description').textContent = fullDesc;
-
-        modal.classList.add('active');
-        document.body.classList.add('modal-open');
-    });
-});
-
-if (modalClose) {
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-        document.body.classList.remove('modal-open');
-    });
-}
-
-if (modal) {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-        }
-    });
-}

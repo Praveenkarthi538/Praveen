@@ -201,7 +201,7 @@
     <section id="projects" class="container">
         <h2 style="margin-bottom: 3rem;">Featured Work</h2>
         <div class="projects-grid">
-            <div class="glass-card project-card" data-details="A full-stack solution featuring a browser-based IDE, a local edge agent for secure SSH/ADB access, and direct hardware control for Arduino boards. Integrated with AI assistants to help students and developers write and debug code in real-time.">
+            <div class="glass-card project-card">
                 <img src="images/project_web_ide.png" alt="Web IDE Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">PYTHON | ADB | SSH | AI</span>
@@ -210,7 +210,7 @@
                         local edge agent for secure SSH/ADB access and direct hardware control of Arduino UNO Q.</p>
                 </div>
             </div>
-            <div class="glass-card project-card" data-details="An industrial-grade wireless notification system designed for hospitals. Utilizing nRF52 series microcontrollers and BLE, it provides a reliable 1500m long-range communication network with double-press logic to ensure patient alerts reach nurses instantly.">
+            <div class="glass-card project-card">
                 <img src="images/project_nurse_call.png" alt="Nurse Call Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">BLE | nRF52 | ZIGBEE</span>
@@ -220,7 +220,7 @@
                     </p>
                 </div>
             </div>
-            <div class="glass-card project-card" data-details="An automated crop protection system that deters wild animals using high-frequency acoustics. The device features intelligent night-only operation using LDR sensors and is built with low-power PIC microcontrollers for maximum field longevity.">
+            <div class="glass-card project-card">
                 <img src="images/project_pig_repellent.png" alt="Pig Repellent Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">PIC | 555 TIMER</span>
@@ -230,7 +230,7 @@
                     </p>
                 </div>
             </div>
-            <div class="glass-card project-card" data-details="A low-power retail automation solution using e-paper displays and Zephyr RTOS. These labels can run for years on a single coin cell battery while receiving instant price and inventory updates over a secure BLE network.">
+            <div class="glass-card project-card">
                 <img src="images/project_esl.png" alt="ESL Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">ZEPHYR RTOS | nRF52</span>
@@ -239,7 +239,7 @@
                         displays. Optimized for retail automation and multi-year battery life.</p>
                 </div>
             </div>
-            <div class="glass-card project-card" data-details="A versatile IoT bridge that connects various BLE sensors and devices to the cloud. Supporting MQTT and HTTP protocols, it enables real-time monitoring, asset tracking, and device management for industrial and smart retail applications.">
+            <div class="glass-card project-card">
                 <img src="images/project_gateway.png" alt="Gateway Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">IoT GATEWAY | MQTT</span>
@@ -248,7 +248,7 @@
                         MQTT/HTTP. Supports asset tracking and ESL device management.</p>
                 </div>
             </div>
-            <div class="glass-card project-card" data-details="An industrial tracking module equipped with MPU6050 inertial sensors for motion detection. It uses BLE proximity technology to monitor the location and status of high-value assets in warehouses and logistics environments.">
+            <div class="glass-card project-card">
                 <img src="images/project_tracking.png" alt="Tracking Project" class="project-img">
                 <div class="project-info">
                     <span style="font-size: 0.7rem; color: var(--primary);">BLE | MPU6050</span>
@@ -259,21 +259,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Project Detail Modal -->
-    <div id="project-modal" class="modal-overlay">
-        <div class="modal-content glass-card">
-            <button class="modal-close" aria-label="Close Modal">&times;</button>
-            <div class="modal-body">
-                <img id="modal-img" src="" alt="Project Preview">
-                <div class="modal-text">
-                    <span id="modal-tags"></span>
-                    <h2 id="modal-title"></h2>
-                    <p id="modal-description"></p>
-                </div>
-            </div>
-        </div>
-    </div>
     <br>
     <section id="contact" class="container">
         <div class="glass-card contact-container">
