@@ -284,14 +284,16 @@ section {
 
 @media (max-width: 768px) {
     .floating-dock {
-        bottom: 20px;
-        top: auto;
-        width: 90%;
+        bottom: 20px !important;
+        top: auto !important;
+        width: 90% !important;
+        height: auto !important;
     }
     
     .dock-container {
-        padding: 8px 15px;
-        gap: 12px;
+        padding: 8px 15px !important;
+        gap: 12px !important;
+        height: auto !important;
     }
     
     .clock-section {
